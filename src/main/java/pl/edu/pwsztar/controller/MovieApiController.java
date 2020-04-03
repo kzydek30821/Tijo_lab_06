@@ -60,8 +60,7 @@ public class MovieApiController {
     public ResponseEntity<MovieCounterDto> countMovies() {
         LOGGER.info("count movies");
 
-        // TODO: Prosze dokonczyc implementacje
-        return new ResponseEntity<>(new MovieCounterDto(), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.getMoviesCount(), HttpStatus.OK);
     }
 
 }
